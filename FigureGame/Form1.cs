@@ -6,5 +6,10 @@ namespace FigureGame
         {
             InitializeComponent();
         }
+
+        private void btnCircle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
