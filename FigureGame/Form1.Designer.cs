@@ -55,6 +55,7 @@
             this.btnRectangle.TabIndex = 1;
             this.btnRectangle.Text = "Rectangle";
             this.btnRectangle.UseVisualStyleBackColor = true;
+            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
             // 
             // btnSquare
             // 
@@ -64,6 +65,7 @@
             this.btnSquare.TabIndex = 2;
             this.btnSquare.Text = "Square";
             this.btnSquare.UseVisualStyleBackColor = true;
+            this.btnSquare.Click += new System.EventHandler(this.btnSquare_Click);
             // 
             // btnTriangle
             // 
@@ -73,6 +75,7 @@
             this.btnTriangle.TabIndex = 3;
             this.btnTriangle.Text = "Triangle";
             this.btnTriangle.UseVisualStyleBackColor = true;
+            this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
             // 
             // btnClear
             // 
@@ -82,6 +85,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnRestart
             // 
@@ -91,6 +95,7 @@
             this.btnRestart.TabIndex = 5;
             this.btnRestart.Text = "Restart";
             this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // btnShoot
             // 
@@ -100,6 +105,7 @@
             this.btnShoot.TabIndex = 6;
             this.btnShoot.Text = "Shoot";
             this.btnShoot.UseVisualStyleBackColor = true;
+            this.btnShoot.Click += new System.EventHandler(this.btnShoot_Click);
             // 
             // Form1
             // 
