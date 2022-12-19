@@ -34,6 +34,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
             this.btnShoot = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCircle
@@ -68,7 +69,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(10, 378);
+            this.btnClear.Location = new System.Drawing.Point(12, 345);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(85, 27);
             this.btnClear.TabIndex = 4;
@@ -78,7 +79,7 @@
             // 
             // btnRestart
             // 
-            this.btnRestart.Location = new System.Drawing.Point(12, 411);
+            this.btnRestart.Location = new System.Drawing.Point(12, 378);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(85, 27);
             this.btnRestart.TabIndex = 5;
@@ -96,11 +97,22 @@
             this.btnShoot.UseVisualStyleBackColor = true;
             this.btnShoot.Click += new System.EventHandler(this.btnShoot_Click);
             // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(12, 411);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(85, 27);
+            this.btnStop.TabIndex = 7;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnShoot);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnClear);
@@ -121,5 +133,6 @@
         private Button btnClear;
         private Button btnRestart;
         private Button btnShoot;
+        private Button btnStop;
     }
 }

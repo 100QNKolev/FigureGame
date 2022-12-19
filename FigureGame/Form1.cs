@@ -7,6 +7,7 @@ namespace FigureGame
     {
         public Random random = new Random();
 
+        public string state = "wokring";
         public const int RectangleSleepTime = 3000;
         public const int CircleSleepTime = 4000;
         public const int TriangleSleepTime = 2000;
@@ -42,6 +43,25 @@ namespace FigureGame
             Environment.Exit(0);
         }
 
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            if (btnStop.Text == "Stop")
+            {
+                this.state = "stop";
+                btnStop.Text = "Resume";
+            }
+            else if (btnStop.Text == "Resume") 
+            {
+                this.state = "working";
+
+                btnCircle.PerformClick();
+                btnRectangle.PerformClick();
+                btnTriangle.PerformClick();
+
+                btnStop.Text = "Stop";
+            }
+        }
+
         private void btnShoot_Click(object sender, EventArgs e)
         {
 
@@ -49,7 +69,7 @@ namespace FigureGame
 
         public void printRectangle(object obj)
         {
-            while (true)
+            while (this.state != "stop")
             {
                 this.CreateGraphics()
                     .DrawRectangle(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0, 100), random.Next(0, 100)));
@@ -59,7 +79,7 @@ namespace FigureGame
 
         public void printCircle(object obj)
         {
-            while (true)
+            while (this.state != "stop")
             {
                 this.CreateGraphics()
                     .DrawEllipse(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0,100), random.Next(0, 100)));
@@ -69,7 +89,7 @@ namespace FigureGame
 
         public void printTriangle(object obj)
         {
-            while (true)
+            while (this.state != "stop")
             {
                 PointF point1 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
                 PointF point2 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
@@ -103,5 +123,6 @@ namespace FigureGame
 
             return result;
         }
+
     }
 }
