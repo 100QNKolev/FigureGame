@@ -30,7 +30,6 @@
         {
             this.btnCircle = new System.Windows.Forms.Button();
             this.btnRectangle = new System.Windows.Forms.Button();
-            this.btnSquare = new System.Windows.Forms.Button();
             this.btnTriangle = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
@@ -57,19 +56,9 @@
             this.btnRectangle.UseVisualStyleBackColor = true;
             this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
             // 
-            // btnSquare
-            // 
-            this.btnSquare.Location = new System.Drawing.Point(12, 78);
-            this.btnSquare.Name = "btnSquare";
-            this.btnSquare.Size = new System.Drawing.Size(85, 27);
-            this.btnSquare.TabIndex = 2;
-            this.btnSquare.Text = "Square";
-            this.btnSquare.UseVisualStyleBackColor = true;
-            this.btnSquare.Click += new System.EventHandler(this.btnSquare_Click);
-            // 
             // btnTriangle
             // 
-            this.btnTriangle.Location = new System.Drawing.Point(12, 111);
+            this.btnTriangle.Location = new System.Drawing.Point(12, 78);
             this.btnTriangle.Name = "btnTriangle";
             this.btnTriangle.Size = new System.Drawing.Size(85, 27);
             this.btnTriangle.TabIndex = 3;
@@ -116,7 +105,6 @@
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnTriangle);
-            this.Controls.Add(this.btnSquare);
             this.Controls.Add(this.btnRectangle);
             this.Controls.Add(this.btnCircle);
             this.Name = "Form1";
@@ -129,7 +117,6 @@
 
         private Button btnCircle;
         private Button btnRectangle;
-        private Button btnSquare;
         private Button btnTriangle;
         private Button btnClear;
         private Button btnRestart;
