@@ -11,6 +11,7 @@ namespace FigureGame
         public const int RectangleSleepTime = 3000;
         public const int CircleSleepTime = 4000;
         public const int TriangleSleepTime = 2000;
+        public int FiguresCount = 0;
 
         public Form1()
         {
@@ -35,6 +36,7 @@ namespace FigureGame
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.ResetText();
+            this.FiguresCount = 0;
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -62,17 +64,14 @@ namespace FigureGame
             }
         }
 
-        private void btnShoot_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void printRectangle(object obj)
         {
             while (this.state != "stop")
             {
                 this.CreateGraphics()
-                    .DrawRectangle(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0, 100), random.Next(0, 100)));
+                    .DrawRectangle(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0, 70), random.Next(0, 70)));
+                this.FiguresCount++;
+
                 Thread.Sleep(RectangleSleepTime);
             }
         }
@@ -82,7 +81,9 @@ namespace FigureGame
             while (this.state != "stop")
             {
                 this.CreateGraphics()
-                    .DrawEllipse(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0,100), random.Next(0, 100)));
+                    .DrawEllipse(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0,70), random.Next(0, 70)));
+                this.FiguresCount++;
+
                 Thread.Sleep(CircleSleepTime);
             }
         }
@@ -103,6 +104,7 @@ namespace FigureGame
                 };
 
                 this.CreateGraphics().DrawPolygon(new Pen(PickBrush()), curvePoints);
+                this.FiguresCount++;
 
                 Thread.Sleep(TriangleSleepTime);
             }
@@ -124,5 +126,9 @@ namespace FigureGame
             return result;
         }
 
+        private void btnCount_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"There are {this.FiguresCount}");
+        }
     }
 }

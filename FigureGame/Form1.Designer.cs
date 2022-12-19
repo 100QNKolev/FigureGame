@@ -33,8 +33,8 @@
             this.btnTriangle = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
-            this.btnShoot = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
+            this.btnCount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCircle
@@ -69,7 +69,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(12, 345);
+            this.btnClear.Location = new System.Drawing.Point(12, 414);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(85, 27);
             this.btnClear.TabIndex = 4;
@@ -79,7 +79,7 @@
             // 
             // btnRestart
             // 
-            this.btnRestart.Location = new System.Drawing.Point(12, 378);
+            this.btnRestart.Location = new System.Drawing.Point(12, 447);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(85, 27);
             this.btnRestart.TabIndex = 5;
@@ -87,19 +87,9 @@
             this.btnRestart.UseVisualStyleBackColor = true;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
-            // btnShoot
-            // 
-            this.btnShoot.Location = new System.Drawing.Point(703, 411);
-            this.btnShoot.Name = "btnShoot";
-            this.btnShoot.Size = new System.Drawing.Size(85, 27);
-            this.btnShoot.TabIndex = 6;
-            this.btnShoot.Text = "Shoot";
-            this.btnShoot.UseVisualStyleBackColor = true;
-            this.btnShoot.Click += new System.EventHandler(this.btnShoot_Click);
-            // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(12, 411);
+            this.btnStop.Location = new System.Drawing.Point(12, 480);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(85, 27);
             this.btnStop.TabIndex = 7;
@@ -107,18 +97,30 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(12, 381);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(85, 27);
+            this.btnCount.TabIndex = 8;
+            this.btnCount.Text = "Count";
+            this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(854, 519);
+            this.Controls.Add(this.btnCount);
             this.Controls.Add(this.btnStop);
-            this.Controls.Add(this.btnShoot);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnTriangle);
             this.Controls.Add(this.btnRectangle);
             this.Controls.Add(this.btnCircle);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -132,7 +134,7 @@
         private Button btnTriangle;
         private Button btnClear;
         private Button btnRestart;
-        private Button btnShoot;
         private Button btnStop;
+        private Button btnCount;
     }
 }
