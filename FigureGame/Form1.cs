@@ -33,7 +33,7 @@ namespace FigureGame
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
+            this.ResetText();
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
