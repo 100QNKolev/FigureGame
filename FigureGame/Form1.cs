@@ -16,7 +16,7 @@ namespace FigureGame
 
         private void btnCircle_Click(object sender, EventArgs e)
         {
-
+            ThreadPool.QueueUserWorkItem(new WaitCallback(printCircle));
         }
 
         private void btnRectangle_Click(object sender, EventArgs e)
@@ -58,6 +58,18 @@ namespace FigureGame
                 Thread.Sleep(RectangleSleepTime);
             }
         }
+
+        public void printCircle(object obj)
+        {
+            while (true)
+            {
+                this.CreateGraphics()
+                    .DrawEllipse(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), 20, 20));
+                Thread.Sleep(RectangleSleepTime);
+            }
+        }
+
+
 
         private Brush PickBrush()
         {
