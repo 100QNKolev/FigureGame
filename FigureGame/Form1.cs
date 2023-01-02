@@ -92,9 +92,9 @@ namespace FigureGame
         {
             while (this.state != "stop")
             {
-                PointF point1 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
-                PointF point2 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
-                PointF point3 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
+                PointF point1 = new PointF(this.random.Next(200, this.Width) + this.random.Next(20, 170), this.random.Next(0, this.Height - 50) + this.random.Next(20, 170));
+                PointF point2 = new PointF(this.random.Next(200, this.Width) + this.random.Next(20, 170), this.random.Next(0, this.Height - 50) + this.random.Next(20, 170));
+                PointF point3 = new PointF(this.random.Next(200, this.Width) + this.random.Next(20, 170), this.random.Next(0, this.Height - 50) + this.random.Next(20, 170));
 
                 PointF[] curvePoints =
                 {
